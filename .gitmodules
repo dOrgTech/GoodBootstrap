@@ -1,16 +1,16 @@
 [submodule "Contracts"]
 	path = packages/contracts
-	url = https://github.com/GoodDollar/GoodContracts.git
+	url = https://github.com/dOrgTech/GoodContracts.git
 	branch = alphav2
 [submodule "Server"]
 	path = packages/server
-	url = https://github.com/GoodDollar/GoodServer.git
+	url = https://github.com/dOrgTech/GoodServer.git
 	branch = master
 [submodule "DApp"]
 	path = packages/dapp
-	url = https://github.com/GoodDollar/GoodDAPP.git
-	branch = master
+	url = https://github.com/dOrgTech/GoodDAPP.git
+	branch = dorg-id-verify
 [submodule "Gun"]
 	path = packages/gun
-	url = https://github.com/GoodDollar/GoodGun.git
+	url = https://github.com/dOrgTech/GoodGun.git
 	branch = master
