@@ -11,8 +11,10 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap --no-ci --concurrency 3",
-    "postinstall": "npm run init-submodules && npm run update-submodules && npm run master-submodules && npm run bootstrap && npm run linkcontracts",
+    "preinstall": "npm run rm-ws",
+    "postinstall": "npm run rm-ws && npm run init-submodules && npm run update-submodules && npm run master-submodules && npm run rm-ws && npm run bootstrap && npm run linkcontracts",
     "linkcontracts": "cd packages/contracts && npm link && cd ../server && npm link @gooddollar/goodcontracts && cd ../dapp && npm link @gooddollar/goodcontracts",
+    "rm-ws": "rm -rf packages/contracts/node_modules/truffle-hdwallet-provider-privkey/node_modules/websocket/.git",
     "logs:reset": "pm2 flush /good-/ || true",
     "logs:blockchain": "pm2 logs good-blockchain --lines 1000",
     "logs:dapp": "pm2 logs good-dapp --lines 1000",
